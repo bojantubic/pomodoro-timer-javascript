@@ -82,7 +82,7 @@ footer {
 }
 
 .total-time__number {
-  width: 120px;
+  width: 130px;
   height: 40px;
 
   border-radius: 10px;
@@ -91,14 +91,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .total-time__number {
-    height: 40px;
-    width: 140px;
-    padding: 0px;
-  }
 }
 
 .pomodoros {
