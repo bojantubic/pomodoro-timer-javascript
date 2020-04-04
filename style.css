@@ -121,14 +121,6 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  .pomodoros__number {
-    height: 40px;
-    width: 140px;
-    border-radius: 10px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
   .total-time__name,
   .pomodoros__name {
     width: fit-content;
