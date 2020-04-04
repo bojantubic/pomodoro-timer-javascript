@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  min-width: 350px;
+  padding: 50px;
+  background: linear-gradient(360deg, #fc4a1a 0%, #f98728 101.91%, #f7b733 182.5%);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 15px solid #fff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    border: 10px solid #fff;
+    border-radius: 0;
+  }
+}
+
+header,
+footer {
+  height: 150px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-time,
+.pomodoros,
+.button__name p {
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 35px;
+  font-variant: small-caps;
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .total-time,
+  .pomodoros,
+  .button__name p {
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.total-time__number {
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 600px) {
+  .total-time__number {
+    width: 140px;
+    padding: 0px;
+  }
+}
+
+.pomodoros {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pomodoros__number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .pomodoros__number {
+    height: 50px;
+    width: 140px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .total-time__name,
+  .pomodoros__name {
+    width: fit-content;
+    text-align: center;
+    line-height: 1;
+  }
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.minutes {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 200px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .minutes {
+    font-size: 150px;
+  }
+}
+
+.seconds {
+  position: absolute;
+  top: 120px;
+  right: 45px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .seconds {
+    top: 120px;
+    right: 30px;
+    font-size: 30px;
+  }
+}
+
+footer {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+button {
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  outline: 0;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover,
+button:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.button__name {
+  width: 100%;
+  padding: 5px 0 5px 0;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .button__name {
+    padding: 0;
+  }
+}
+
+.button__name p {
+  width: 100%;
+}
