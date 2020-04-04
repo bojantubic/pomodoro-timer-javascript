@@ -23,6 +23,19 @@ function toggleText() {
   }
 }
 
+// PROGRESS BAR
+const circle = document.querySelector("circle");
+const radius = circle.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = circumference;
+
+function setProgress(percent) {
+  const offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+}
+
 // DISPLAY TOTAL TIME
 function displayTotalTime() {
   let totalTime = 0;
@@ -70,15 +83,17 @@ function toggleTimer() {
   if (timerRunning === false) {
     countDown = setInterval(() => {
       const secondsLeft = Math.round((then - Date.now()) / 1000);
+      const percentsLeft = 100 + Math.round(((Date.now() + 100 - then) / 1000 / 1500) * 100);
+      displayTime(secondsLeft);
+      setProgress(percentsLeft);
+
       if (secondsLeft < 0) {
         clearInterval(countDown);
         buttonHTML.innerHTML = "well done!";
-        pomodorosNumber += 1;
-
         return;
       }
-      displayTime(secondsLeft);
     }, 1000);
+
     timerRunning = true;
   } else {
     clearInterval(countDown);
