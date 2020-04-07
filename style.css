@@ -157,7 +157,7 @@ svg {
 svg circle {
   transform-origin: center;
   transform: rotate(-90deg);
-  transition: all linear 0.2s;
+  transition: all linear 13s;
   stroke-linecap: round;
 }
 
