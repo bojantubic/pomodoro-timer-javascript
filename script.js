@@ -2,12 +2,7 @@
 const minutesHTML = document.querySelector(".minutes");
 const secondsHTML = document.querySelector(".seconds");
 const buttonHTML = document.querySelector("button p");
-let totalTimeNumber = document.querySelector(".total-time__number");
-
-// SESSIONS
-const work = 1500;
-const shortBreak = 300;
-const longBreak = 900;
+const totalTimeNumber = document.querySelector(".total-time__number");
 
 // EVENT LISTENERS
 buttonHTML.addEventListener("click", toggleText);
@@ -74,7 +69,7 @@ let timerRunning = false;
 let countDown;
 
 function toggleTimer() {
-  session = work;
+  session = 1500; // 25 minutes
   displayTime(session);
 
   const now = Date.now();
@@ -87,7 +82,7 @@ function toggleTimer() {
       displayTime(secondsLeft);
       setProgress(percentsLeft);
 
-      if (secondsLeft < 0) {
+      if (secondsLeft === 0) {
         clearInterval(countDown);
         buttonHTML.innerHTML = "well done!";
         return;
