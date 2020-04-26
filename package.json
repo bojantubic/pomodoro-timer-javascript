@@ -1,0 +1,19 @@
+{
+  "name": "pomodoro-timer-javascript",
+  "version": "1.0.0"
+  "description": "A pomodoro timer made in JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bojantubic/pomodoro-timer-javascript.git"
+  },
+  "author": "Bojan Tubic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bojantubic/pomodoro-timer-javascript/issues"
+  },
+  "homepage": "https://github.com/bojantubic/pomodoro-timer-javascript#readme"
+}
